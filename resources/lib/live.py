@@ -28,4 +28,5 @@ class Live:
         string = string.replace("'", '"')
         
         sources = json.loads(string)
-        return sources[0]["file"]
+        # Return HD HLS stream
+        return sources[1]["file"]
