@@ -13,6 +13,7 @@ __plugin__ = "plugin.video.supertennis"
 __author__ = "Nightflyer"
 
 Addon = xbmcaddon.Addon(id=__plugin__)
+Icon = os.path.join(Addon.getAddonInfo('path'), 'icon.png')
 
 # plugin handle
 handle = int(sys.argv[1])
@@ -35,7 +36,7 @@ def addLinkItem(parameters, li):
 
 # UI builder functions
 def show_root_menu():
-    liStyle=xbmcgui.ListItem("Live")
+    liStyle=xbmcgui.ListItem("Live", thumbnailImage=Icon)
     liStyle.setProperty('IsPlayable', 'true')
     addLinkItem({"mode": "live"}, liStyle)
     xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
