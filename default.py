@@ -44,8 +44,8 @@ def show_root_menu():
 
 def play_live():
     live = Live()
-    #url = live.getMobileUrl()
-    url = live.getUrl()
+    url = live.getMobileUrl()
+    #url = live.getUrl()
     liStyle=xbmcgui.ListItem(path=url)
     xbmcplugin.setResolvedUrl(handle=handle, succeeded=True, listitem=liStyle)
 
